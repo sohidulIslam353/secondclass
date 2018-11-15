@@ -6,6 +6,8 @@
             <div class="card">
                 <div class="card-header">Dashboard <a href="" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm " style="float: right;">Add New</a></div>
 
+                <a href="{{ route('news.add') }}" class="btn btn-danger">News Add</a>
+
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

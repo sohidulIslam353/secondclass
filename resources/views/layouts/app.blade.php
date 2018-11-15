@@ -53,6 +53,8 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
+                                
+
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -63,8 +65,14 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
+                                    <a class="nav-link" href="{{ route('password.change') }}">{{ __('Password Change') }}</a>
+
+                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+
                                 </div>
                             </li>
+
                         @endguest
                     </ul>
                 </div>
